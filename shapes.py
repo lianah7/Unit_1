@@ -1,5 +1,7 @@
 import turtle
-turtle.speed(0)
+
+turtle.speed(8)
+# makes a triangle
 for x in range(3):
     turtle.forward(100)
     turtle.left(120)
@@ -14,7 +16,7 @@ for x in range(4):
     turtle.forward(90)
 
 turtle.penup()
-turtle.forward(130)
+turtle.forward(140)
 turtle.right(160)
 turtle.pendown()
 turtle.forward(90)
@@ -71,9 +73,26 @@ turtle.forward(160)
 turtle.pendown()
 turtle.seth(180)
 
+#makes a house
+turtle.color("turquoise")
+turtle.begin_fill()
+
 for x in range(4):
     turtle.forward(80)
     turtle.left(90)
-turtle.right(120)
+
+turtle.end_fill()
+turtle.color("blue violet")
+turtle.begin_fill()
+turtle.right(60)
+turtle.forward(80)
+turtle.left(120)
+turtle.forward(80)
+turtle.seth(180)
+turtle.end_fill()
+turtle.penup()
+turtle.forward(140)
+turtle.pendown()
+turtle.seth(180)
 
 turtle.exitonclick()
