@@ -1,32 +1,38 @@
+# by Liana Hill
+# September 17, 2019
+# This program creates four octagons in four different colors and locations
+
 import turtle
 
 
-# octagon function
-def draw_octagon():
+# This function makes an octagon
+def draw_octagon(color):
+    turtle.color(color)
+    turtle.begin_fill()
     for x in range(8):
-        turtle.fd(50)
+        turtle.fd(60)
         turtle.rt(45)
+    turtle.end_fill()
 
 
-# goto function
-def go_to(x,y):
+# This function moves turtle to chosen location
+def go_to(x, y):
     turtle.penup()
-    turtle.goto(x,y)
+    turtle.goto(x, y)
     turtle.pendown()
 
 
-# creates a bright blue octagon
-turtle.color("dodger blue")
-turtle.begin_fill()
-draw_octagon()
-turtle.end_fill()
-go_to(200,5)
+# The following lines create octagons in new locations and colors
+draw_octagon("teal")
+go_to(200, 0)
 
-# makes a bright purple octagon
-turtle.color("medium slate blue")
-turtle.begin_fill()
-draw_octagon()
-turtle.end_fill
+draw_octagon("medium purple")
+go_to(200, 200)
 
-# program stays on screen until click
+draw_octagon("medium turquoise")
+go_to(0, 200)
+
+draw_octagon("indigo")
+
+# This line shows the program stays on screen until click
 turtle.exitonclick()
