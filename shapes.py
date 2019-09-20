@@ -3,18 +3,22 @@ import turtle
 turtle.speed(8)
 
 # function for making a square
-def draw_square():
+def draw_square(length):
     for x in range(4):
-        turtle.fd(100)
+        turtle.fd(length)
         turtle.right(90)
 
 
 # function for making a triangle
-def draw_triangle():
+def draw_triangle(length):
     for x in range(3):
-        turtle.forward(100)
+        turtle.forward(length)
         turtle.left(120)
 
+# function for a house
+def draw_house(length):
+    draw_square(length)
+    draw_triangle(length)
 
 turtle.penup()
 turtle.left(90)
@@ -63,20 +67,18 @@ turtle.forward(200)
 turtle.pendown()
 
 # following lines make many squares
-draw_square()
+draw_square(100)
 turtle.right(20)
 
-draw_square()
+draw_square(100)
 turtle.right(20)
 
-for x in range(4):
-    turtle.forward(90)
-    turtle.left(90)
-
+draw_square(100)
 turtle.right(20)
-for x in range(4):
-    turtle.forward(90)
-    turtle.left(90)
+
+draw_square(100)
+turtle.right(20)
+
 
 turtle.right(50)
 turtle.penup()
@@ -104,7 +106,10 @@ turtle.end_fill()
 turtle.penup()
 turtle.forward(140)
 turtle.pendown()
-turtle.seth(180)
+turtle.seth(270)
 turtle.end_fill()
+
+
+draw_house(80)
 
 turtle.exitonclick()
